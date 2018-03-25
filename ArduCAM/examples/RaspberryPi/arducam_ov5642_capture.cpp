@@ -117,7 +117,7 @@ int main(int argc, char *argv[])
       while ( length-- )
 		  {
 		    temp_last = temp;
-		    temp =  myCAM.transfer(0x00);
+		    temp =  myCAM.read_fifo();
 		    //Read JPEG data from FIFO
 		    if ( (temp == 0xD9) && (temp_last == 0xFF) ) //If find the end ,break while,
 		    {
